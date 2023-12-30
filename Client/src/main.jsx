@@ -6,6 +6,6 @@ import tailwindConfig from '../tailwind.config.js'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+    <App /> 
+  </React.StrictMode>
 )

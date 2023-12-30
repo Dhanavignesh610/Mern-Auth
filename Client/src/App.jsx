@@ -1,4 +1,5 @@
-
+import { BrowserRouter, Route, Routes } from "react-router-dom"
+i
 export default function App() {
   return (
     <>
@@ -6,6 +7,5 @@ export default function App() {
       Hello world!
     </h2>
     </>
-    
   )
 }
