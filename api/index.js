@@ -14,7 +14,7 @@ mongoose.connect(process.env.MONGODB).then(() => {
 
 app.use(express.json());
 
-app.listen(3000,console.log(`server is listening in 3000`))
+app.listen(4000,console.log(`server is listening in 4000`))
 
 app.get('/',(req,res) => {
  res.json({
@@ -23,3 +23,13 @@ app.get('/',(req,res) => {
 })
 
 app.use('/api/auth',authRouter)
+
+app.use( (err,req,res,next) => {
+    const statusCode = err.statusCode || 500;
+    const message = err.message || 'Internal server error'
+    return res.status(statusCode).json({ 
+       success:false,    
+       message,
+       statusCode
+      }) 
+   })

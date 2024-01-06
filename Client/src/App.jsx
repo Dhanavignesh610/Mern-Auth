@@ -1,11 +1,14 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
-i
+import Signup from "./pages/signup"
+import Signin from "./pages/Signin"
+
 export default function App() {
   return (
-    <>
-    <h2 className="text-3xl text-green-700 font-bold underline">
-      Hello world!
-    </h2>
-    </>
+    <BrowserRouter>
+   <Routes>
+    <Route path="/signup" element={<Signup />}/>
+    <Route path="/signin" element={<Signin />}/>
+   </Routes>
+    </BrowserRouter>
   )
 }
